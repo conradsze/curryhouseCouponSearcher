@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Curry house</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  </head>
+  <body>
+    <div>
+    	<input type="date" name="today" id= "today">
+    	<select id= "location" name="locations">
+		</select>
+    </div>
+
+     <button id="search">search</button>
+      <div id="root">coupon
+      <div id="coupon"></div>
+      </div>
+    <script type="text/javascript">
+	// var char = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+	// var locations = [];
+	// for (var i = 0; i < char.length; i++) {
+	// 	for (var j = 0; j < char.length; j++) {
+	// 		locations.push(char[i]+char[j])
+	// 	}
+	// }
+
+	var locations = ["Cypress", "Gardena", "Irvine", "Little Tokyo", "Monterey Park", "Puente Hills", "Torrance", "West LA"]
+	var locationcodes = ["CY", "GA", "IR", "LT", "MP", "PH", "TR", "WL"]
+
+		
+
+		for (var i = locations.length -1 ; i >= 0; i--) {
+			$("#location").append('<option value="' + locationcodes[i] + '">' + locations[i] + '</option>')
+		}	
+
+	// var allLocations = function(){
+	// 	var locations = ["CY", "GA", "IR", "LT", "MP", "PH", "TR", "WL"]
+
+
+	// 	for (var i = 0; i < locations.length; i++) {
+	// 		var url = "http://www.curryhousemail.com/e_invitation/" + locations[i] + "/img/e_invitation_" + locations[i] + "_08112017.jpg"
+	// 		$("body").append('<h3>' + locations[i] + '</h3><img src="' + url + '" />')
+	// 	}	
+	// }
+
+	var allDates = function(){
+		$("#coupon").empty()
+		for (var i = 1; i < 32; i++) {
+			var url = "http://www.curryhousemail.com/e_invitation/" + $('#location').val() + "/img/e_invitation_" + $('#location').val() + "_0" + ($('#today').val().split("-")[1]*100+i) + $('#today').val().split("-")[0] + ".jpg"
+			// $.ajax({
+  	// 			url: url,
+			// 	success: function() {
+       				$("#coupon").append('<img src="'+ url +'" onError="this.onerror = '+"''"+' ;this.style.visibility='+"'hidden'"+';" />')
+
+			// 	},
+			// 	error: function() {
+   //      		// page does not exist
+			// 	}
+			// });
+		}	
+
+		$('img').css({'width' : '20%'});
+
+	}
+	
+	$("#search").click(allDates)
+    </script>
+  </body>
+</html>
+
