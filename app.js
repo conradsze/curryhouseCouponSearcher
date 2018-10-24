@@ -26,9 +26,9 @@
 		var location = $('#location').val()
 		for (var i = 1; i < 32; i++) {
 			if(month < 10){
-				var url = "http://www.curryhousemail.com/e_invitation/" + location + "/img/e_invitation_" + location + "_0" + (month*100+i) + year + ".jpg"
+				var url = "https://curryhouse.seeknetusa.com/" + location + "/img/e_invitation_" + location + "_0" + (month*100+i) + year + ".jpg"
 			}else{
-				var url = "http://www.curryhousemail.com/e_invitation/" + location + "/img/e_invitation_" + location + "_" + (month*100+i) + year + ".jpg"
+				var url = "https://curryhouse.seeknetusa.com/" + location + "/img/e_invitation_" + location + "_" + (month*100+i) + year + ".jpg"
 			}
       	 	$("#coupon").append('<img src="'+ url +'" onError="this.onerror = '+"''"+' ;this.style.visibility='+"'hidden'"+';" />')
 		}	
