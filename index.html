@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <title>Curry house</title>
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet"  href="https://code.jquery.com/mobile/git/jquery.mobile-git.css" /> 
+  <link rel="stylesheet" href="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.css" />
+  <script src="https://code.jquery.com/jquery-1.9.1.js"></script> 
+  <script src="https://rawgithub.com/jquery/jquery-ui/1-10-stable/ui/jquery.ui.datepicker.js"></script>
+  <script src="https://code.jquery.com/mobile/git/jquery.mobile-git.js"></script> 
+  <script src="https://rawgithub.com/arschmitz/jquery-mobile-datepicker-wrapper/master/jquery.mobile.datepicker.js"></script>
+  
   </head>
   <body>
     <div>
       <h3>Curry House Coupon Searcher</h3>
       <p>Month you want to search(default is this month)</p>
-    	<input type="date" name="today" id= "today">
+      <input type="text" data-inline="true" data-role="date" name="today" id= "today">
       <p>Location of the curryhouse you want to seach</p>
     	<select id= "location" name="locations">
 		</select>

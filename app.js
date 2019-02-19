@@ -20,9 +20,9 @@
 		$("#coupon").empty()
 		var now = new Date()
 		console.log(now)
-		var month = $('#today').val().split("-")[1] || ((now.getMonth()+1)<10 ? "0" + (now.getMonth()+1) : (now.getMonth()+1))
+		var month = $('#today').val().split("/")[0] || ((now.getMonth()+1)<10 ? "0" + (now.getMonth()+1) : (now.getMonth()+1))
 		console.log(month)		
-		var year = $('#today').val().split("-")[0] || now.getFullYear()
+		var year = $('#today').val().split("/")[2] || now.getFullYear()
 		var location = $('#location').val()
 		var GA = ""
 		for (var i = 1; i < 32; i++) {
