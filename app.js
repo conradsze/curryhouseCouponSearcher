@@ -6,8 +6,8 @@
 	// 	}
 	// }
 
-	var locations = ["Cypress", "Gardena", "Irvine", "Little Tokyo", "Monterey Park", "Puente Hills", "Torrance", "West LA"]
-	var locationcodes = ["CY", "GA", "IR", "LT", "MP", "PH", "TR", "WL"]
+	var locations = ["Cypress", "Cupertino", "Gardena", "Irvine", "Little Tokyo", "Monterey Park", "Puente Hills", "Torrance", "West LA"]
+	var locationcodes = ["CY","CU","GA", "IR", "LT", "MP", "PH", "TR", "WL"]
 
 		
 
@@ -24,11 +24,16 @@
 		console.log(month)		
 		var year = $('#today').val().split("-")[0] || now.getFullYear()
 		var location = $('#location').val()
+		var GA = ""
 		for (var i = 1; i < 32; i++) {
+			if(location=="GA"){
+				GA="wl"
+			}
+
 			if(month < 10){
-				var url = "https://curryhouse.seeknetusa.com/" + location + "/img/e_invitation_" + location + "_0" + (month*100+i) + year + ".jpg"
+				var url = "http://www.curryhousemail.com/e_invitation/" + location + "/img/e_invitation_" + location + "_0" + (month*100+i) + year + GA + ".jpg"
 			}else{
-				var url = "https://curryhouse.seeknetusa.com/" + location + "/img/e_invitation_" + location + "_" + (month*100+i) + year + ".jpg"
+				var url = "http://www.curryhousemail.com/e_invitation/" + location + "/img/e_invitation_" + location + "_" + (month*100+i) + year + GA + ".jpg"
 			}
       	 	$("#coupon").append('<img src="'+ url +'" onError="this.onerror = '+"''"+' ;this.style.visibility='+"'hidden'"+';" />')
 		}	
