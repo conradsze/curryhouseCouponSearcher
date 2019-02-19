@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <title>Curry house</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   </head>
   <body>
     <div>
+      <h3>Curry House Coupon Searcher</h3>
+      <p>Month you want to search(default is this month)</p>
     	<input type="date" name="today" id= "today">
+      <p>Location of the curryhouse you want to seach</p>
     	<select id= "location" name="locations">
 		</select>
     </div>
 
      <button id="search">search</button>
-      <div id="root">coupon
+      <div id="root">Coupon:
       <div id="coupon"></div>
       </div>
     <script src="./app.js"></script>
